@@ -1,0 +1,9 @@
+.waitListBtn {
+  color: #fff;
+  background: #673a58;
+  border-radius: 4px;
+}
+.waitListBtn:hover {
+  color: #fff;
+  background: #673a58;
+}
