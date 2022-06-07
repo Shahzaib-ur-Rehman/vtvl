@@ -21,11 +21,40 @@ ChartJS.register(
   Legend
 );
 
+const data = {
+  labels: [
+    "02-01-22",
+    "02-02-22",
+    "02-03-22",
+    "02-04-22",
+    "02-05-22",
+    "02-06-22",
+  ],
+  datasets: [
+    {
+      label: "First dataset",
+      data: [0, 0, 20, 40, 60, 65],
+      fill: true,
+      backgroundColor: "rgba(75,192,192,0.2)",
+      borderColor: "rgba(75,192,192,1)",
+    },
+  ],
+};
+
+const legend = {
+  display: false,
+  position: "bottom",
+  labels: {
+    fontColor: "#323130",
+    fontSize: 14,
+  },
+};
+
 export const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: "top" as const,
+      position: "bottom" as const,
     },
     title: {
       display: true,
@@ -35,18 +64,6 @@ export const options = {
 };
 
 const labels = ["January", "February", "March", "April", "May", "June", "July"];
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: "Dataset 1",
-      data: [0, 25, 50, 75, 100],
-      borderColor: "rgb(255, 99, 132)",
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
-    },
-  ],
-};
 
 export function LineChart() {
   return <Line options={options} data={data} />;

@@ -21,12 +21,25 @@ export const data = {
   ],
 };
 
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "bottom" as const,
+    },
+    title: {
+      display: true,
+      text: "Chart.js Line Chart",
+    },
+  },
+};
+
 export default function PaiChart() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid item xs={6}>
-          <Doughnut data={data} />
+          <Doughnut data={data} options={options} />
         </Grid>
         <Grid item xs={6}>
           <AvailableToClaim />
