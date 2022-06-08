@@ -1,0 +1,9 @@
+@media only screen and (min-width: 992px) {
+  .HeadingWrapper {
+    max-width: 890px;
+    margin: 0 auto;
+  }
+  .graphSection {
+    padding: 56px 0;
+  }
+}

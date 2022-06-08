@@ -7,3 +7,26 @@
   color: #fff;
   background: #673a58;
 }
+.leftContent h1 {
+  color: #673a58;
+}
+.leftContent p {
+  color: #673a58;
+}
+@media only screen and (min-width: 992px) {
+  .bannerSection {
+    padding: 56px 0;
+  }
+  .leftContent h1 {
+    color: #673a58;
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .leftContent p {
+    color: #673a58;
+    font-size: 29px;
+    line-height: 33px;
+    margin-bottom: 25px;
+  }
+}

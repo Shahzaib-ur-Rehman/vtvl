@@ -1,5 +1,18 @@
+.pageHeader {
+  border-bottom: 1px solid #666;
+  padding: 6px 15px;
+}
 .betaPrivateBtn {
-  background: #c9b2c1;
-  border-radius: 10px;
+  background: #dfdfdf;
+  border-radius: 15px;
   margin-left: 5px;
+  color: #737373;
+  padding: 4px 6px;
+  font-size: 14px;
+}
+@media only screen and (min-width: 992px) {
+  .pageHeader {
+    border-bottom: 1px solid #666;
+    padding: 20px 30px;
+  }
 }

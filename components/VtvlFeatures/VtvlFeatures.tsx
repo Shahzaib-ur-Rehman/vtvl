@@ -2,6 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
+import styles from "./vtvlFeatures.module.css";
 import Typography from "@mui/material/Typography";
 let VtvlFeaturesList = [
   {
@@ -36,12 +37,33 @@ let VtvlFeaturesList = [
 
 export default function VtvlFeatures() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={8}>
+    // <Box sx={{ flexGrow: 1 }}>
+    //   <Grid container spacing={2}>
+    //     <Grid item xs={8}>
+    //       {VtvlFeaturesList.map((content) => {
+    //         return (
+    //           <div>
+    //             <Image src={content.src} width={50} height={50} />
+    //             <Typography variant="h6" gutterBottom component="h6">
+    //               {content.name}
+    //             </Typography>
+    //             <Typography variant="subtitle1" gutterBottom component="span">
+    //               {content.discription}
+    //             </Typography>
+    //           </div>
+    //         );
+    //       })}
+    //     </Grid>
+    //   </Grid>
+    // </Box>
+    <section className={`${styles.featuresSection}`}>
+      <h2 className="text-center">VTVL Features</h2>
+      <div className="container">
+        <div className="row justify-content-md-center">
+        
           {VtvlFeaturesList.map((content) => {
             return (
-              <div>
+              <div className={`col-md-4 text-center mb-md-5 ${styles.featureCardWrapper}`}>
                 <Image src={content.src} width={50} height={50} />
                 <Typography variant="h6" gutterBottom component="h6">
                   {content.name}
@@ -52,8 +74,9 @@ export default function VtvlFeatures() {
               </div>
             );
           })}
-        </Grid>
-      </Grid>
-    </Box>
+         
+        </div>
+      </div>
+    </section>
   );
 }

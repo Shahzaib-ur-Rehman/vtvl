@@ -1,0 +1,34 @@
+.audienceSection {
+  padding: 44px 0;
+  background-color: #673a58;
+}
+.heading {
+  color: #fff;
+  text-align: center;
+}
+.cardBody h5 {
+  color: #000;
+  font-weight: 600;
+  font-size: 28px;
+}
+.cardBody p {
+  color: #000;
+}
+@media only screen and (min-width: 992px) {
+  .audienceSection {
+    padding: 100px 0;
+  }
+  .cardBody h5 {
+    margin-bottom: 15px;
+  }
+  .cardBody {
+    min-height: 220px;
+    padding: 15px 135px 30px 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .cardBody span {
+    font-weight: 600;
+  }
+}
