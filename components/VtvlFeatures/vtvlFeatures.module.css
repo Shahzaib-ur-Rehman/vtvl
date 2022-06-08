@@ -1,0 +1,15 @@
+.featureCardWrapper h6 {
+  color: #673a58;
+  font-weight: 600;
+}
+@media only screen and (min-width: 992px) {
+  .featuresSection {
+    padding: 56px 0;
+  }
+  .featureCardWrapper {
+    padding: 0 48px;
+  }
+  .featureCardWrapper h6 {
+    margin: 10px 0 15px 0;
+  }
+}

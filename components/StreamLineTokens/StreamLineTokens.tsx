@@ -2,8 +2,10 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import styles from "./streamLineTokens.m.module.css";
 import PaiChart from "./PieChart";
 import { LineChart } from "./LineChart";
+
 
 export const data = {
   labels: ["Available to claim", "Claimed", "vesting in progress"],
@@ -27,7 +29,9 @@ export const data = {
 };
 export default function StreamLineTokens() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+     <section className={`${styles.graphSection}`}>
+       <div className="container">
+        <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Typography
@@ -36,13 +40,18 @@ export default function StreamLineTokens() {
             component="div"
             textAlign={"center"}
           >
-            Design token vesting schedules, automate distributions and manage
-            your token cap table - all in one platform
+            <div className={`${styles.HeadingWrapper}`}>
+              <h2>
+            Streamline token vesting management with a few clicks. 
+            No-code required.
+            </h2>
+            </div>
           </Typography>
         </Grid>
       </Grid>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
+     
+        <div className="row">
+          <div className="col-md-6">
           <Typography
             variant="subtitle2"
             gutterBottom
@@ -60,9 +69,8 @@ export default function StreamLineTokens() {
             10,000.00
           </Typography>
           <PaiChart />
-        </Grid>
-
-        <Grid item xs={6}>
+        </div>
+         <div className="col-md-6">
           <Typography
             variant="subtitle2"
             gutterBottom
@@ -80,8 +88,12 @@ export default function StreamLineTokens() {
             10,000.00
           </Typography>
           <LineChart />
-        </Grid>
-      </Grid>
+        
+      </div>
+      </div>
     </Box>
+    </div>
+    </section>
+
   );
 }
